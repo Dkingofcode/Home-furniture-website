@@ -17,7 +17,7 @@ const Filters = () => {
         <div className='form-control'>
           <input type="text" name="text" placeholder='search' className='search-input' value={text} onChange={updateFilters} />
         </div>
-
+       {/* categories */}
         <div className='form-control'>
           <h5>category</h5>
           <div>
@@ -71,7 +71,16 @@ const Filters = () => {
             <input type="range" name='price' onChange={updateFilters} min={min_price} max={max_price} value={price} />
            </div>
           {/* end of price */}
+
+          {/* shipping */}
+           <div className='form-control shipping'>
+            <label htmlFor='shipping'>free shipping</label>
+            <input type='checkbox' name='shipping' id='shipping' onChange={updateFilters} checked={shipping} />
+           </div>
+
+          {/* end of shipping */}
         </form>
+        <button type='button' className='clear-btn' onClick={clearFilters}>{' '} clear filters </button>
       <h4>filters</h4>
       </div>
 
